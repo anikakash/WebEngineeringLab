@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Guess the Number</title>
+  </head>
+  <body>
+    <h1>Guess the Number</h1>
+    <p>Guess a number between 1 and 10:</p>
+    <input type="text" id="guess-input">
+    <button onclick="checkGuess()">Submit</button>
+    <p id="result"></p>
+    <p id = "ak"></p>
+
+    <script>
+      // Generate a random number between 1 and 10
+      const randomNumber = Math.floor(Math.random() * 10) + 1;
+
+      function checkGuess() {
+        // Get the user's guess from the input field
+        const guess = parseInt(document.getElementById("guess-input").value);
+        document.getElementById("ak").textContent = guess;
+        // Check if the guess matches the random number
+        if (guess === randomNumber) {
+          document.getElementById("result").innerHTML = "Good Work!";
+        } else {
+          document.getElementById("result").innerHTML = "Not matched.";
+        }
+      }
+    </script>
+  </body>
+</html>

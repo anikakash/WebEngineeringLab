@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table Example</title>
+	<style>
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+		
+		td, th {
+			border: 1px solid black;
+			padding: 10px;
+			text-align: center;
+		}
+		
+		.row1 {
+			height: 50px;
+		}
+		
+		.row2, .row3, .row4, .row5 {
+			height: 50px;
+		}
+		
+		.row1 td {
+			width: 100%;
+			font-size: 24px;
+			font-weight: bold;
+			text-align: center;
+			vertical-align: middle;
+		}
+		
+		.row2 td:first-child {
+			text-align: left;
+		}
+		
+		.row2 td:last-child {
+			text-align: right;
+		}
+		
+		.row3 td {
+			text-align: left;
+		}
+		
+		.row3 td:nth-child(2), .row4 td:nth-child(2), .row5 td:nth-child(2) {
+			text-align: left;
+		}
+		
+		.row3 td:nth-child(3), .row4 td:nth-child(3), .row5 td:nth-child(3) {
+			text-align: left;
+		}
+		
+		.row3 td:last-child, .row4 td:last-child, .row5 td:last-child {
+			text-align: left;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<tr class="row1">
+			<td colspan="1">a</td>
+		</tr>
+		<tr class="row2">
+			<td>b</td>
+			<td>c</td>
+		</tr>
+		<tr class="row3">
+			<td>d</td>
+			<td>e</td>
+			<td>f</td>
+			<td>g</td>
+		</tr>
+		<tr class="row4">
+			<td>d</td>
+			<td>e</td>
+			<td>f</td>
+			<td>g</td>
+		</tr>
+		<tr class="row5">
+			<td>d</td>
+			<td>e</td>
+			<td>f</td>
+			<td>g</td>
+		</tr>
+	</table>
+</body>
+</html>
