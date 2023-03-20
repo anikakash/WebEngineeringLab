@@ -9,23 +9,8 @@
     <input type="text" id="guess-input">
     <button onclick="checkGuess()">Submit</button>
     <p id="result"></p>
-    <p id = "ak"></p>
+    <p id = "rnd"></p>
 
-    <script>
-      // Generate a random number between 1 and 10
-      const randomNumber = Math.floor(Math.random() * 10) + 1;
-
-      function checkGuess() {
-        // Get the user's guess from the input field
-        const guess = parseInt(document.getElementById("guess-input").value);
-        document.getElementById("ak").textContent = guess;
-        // Check if the guess matches the random number
-        if (guess === randomNumber) {
-          document.getElementById("result").innerHTML = "Good Work!";
-        } else {
-          document.getElementById("result").innerHTML = "Not matched.";
-        }
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
