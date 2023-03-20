@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Palindrom</title>
+</head>
+<body>
+    <h1>Palindrom Check</h1>
+    <p>Input a string to check Palindrom or Not: </p>
+    <input type="text" id="input">
+    <button onclick="chkPalindrom()">check</button>
+    <p id="out"></p>
+
+    <script>
+        function chkPalindrom(){
+            let name = document.getElementById("input").value;
+            let tmp = "";
+            for(let i=name.length-1; i>=0; i--){
+                tmp+=name[i];
+            }
+            if(tmp==name)document.getElementById("out").textContent="This is Palindrom";
+            else document.getElementById("out").textContent="This is Not Palindrom";
+        }
+    </script>
+</body>
+</html>
