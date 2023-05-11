@@ -6,6 +6,9 @@
     letter-spacing: 2px;
     font-weight: 700;
 }
+.box1{
+    margin-top: 10px;
+}
 .box1 h2{
     float: left;
 }

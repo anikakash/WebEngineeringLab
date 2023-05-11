@@ -1,15 +1,19 @@
 <?php include("header.php");?>
 <?php include("dbcon.php");?>
+<?php
+include_once './auth_user.php'
+?>
 
-    <!-- <div class="d-flex">
+
+    <div class="d-flex">
     <input class="form-control me-2 mb-10" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
-    </div> -->
+    </div>
 
-    <!-- <div class="box1">
+    <div class="box1">
         <h2>All Information</h2>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">ADD DATA</button>
-    </div> -->
+    </div>
 
     <table class="table table-hover table-bordered table-striped">
         <tr>
@@ -18,8 +22,8 @@
             <th>Department</th>
             <th>Course Duration</th>
             <th>Location</th>
-            <!-- <th>Update</th>
-            <th>Delete</th> -->
+            <th>Update</th>
+            <th>Delete</th>
         </tr>
         <tr>
             <?php
@@ -38,8 +42,8 @@
                                 <td> <?php echo $row['department'];  ?> </td>
                                 <td> <?php echo $row['courses_duration'];  ?> </td>
                                 <td> <?php echo $row['location'];  ?> </td>
-                                <!-- <td><a href="update_page_1.php?id=<?php echo $row['id'];?>" class='btn btn-success'>Update</a></td>
-                                <td><a href="delete_page.php?id=<?php echo $row['id'];?>" class='btn btn-danger'>Delete</a></td> -->
+                                <td><a href="update_page_1.php?id=<?php echo $row['id'];?>" class='btn btn-success'>Update</a></td>
+                                <td><a href="delete_page.php?id=<?php echo $row['id'];?>" class='btn btn-danger'>Delete</a></td>
                             </tr>
                         <?php
                     }
@@ -76,7 +80,7 @@
 
 
 <!-- Modal Form -->
-<!-- <form action="insert_data.php" method="post">
+<form action="insert_data.php" method="post">
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -114,7 +118,7 @@
     </div>
   </div>
 </div>
-</form> -->
+</form>
 
 
 <?php include("footer.php");?>

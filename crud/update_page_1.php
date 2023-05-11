@@ -26,19 +26,19 @@
             if(isset($_GET['id_new'])){
                 $idnew = $_GET['id_new'];
             }
-            $fname = $_POST['f_name'];
-            $lname = $_POST['l_name'];
-            $age = $_POST['age'];
+            $uname  = $_POST['uni_name'];
+            $dept = $_POST['department'];
+            $time = $_POST['courses_duration']; 
+            $city = $_POST['location']; 
 
-            $query = "update `students` set `first_name` = '$fname', `last_name` = '$lname', `age` = '$age' where 
-            `id` = '$idnew'";
+            $query = "update `students` set `uni_name` = '$uname', `department` = '$dept', `courses_duration` = '$time', `location` = '$city'  where `id` = '$idnew'";
 
             $result = mysqli_query($connection, $query);
             
             if(!$result){
                 die("Query Failed*a*".mysqli_error($connection));
             }else{
-                header("location:index.php?update_msg=You have successfully updated the data.");
+                header("location:admin_home.php?update_msg=You have successfully updated the data.");
             }
         }
     ?>
@@ -47,19 +47,25 @@
 
     <form action="update_page_1.php?id_new=<?php echo $id;?>" method="post">
         <div class="form-group">
-            <label for="f_name">First Name</label>
-            <input type="text" name="f_name" class="form-control" value="<?php echo $row['first_name'] ?>">
+            <label for="uni_name">University Name	</label>
+            <input type="text" name="uni_name" class="form-control" value="<?php echo $row['uni_name'] ?>">
         </div>
 
         <div class="form-group">
-            <label for="l_name">Last Name</label>
-            <input type="text" name="l_name" class="form-control" value="<?php echo $row['last_name'] ?>">
+            <label for="department">Department</label>
+            <input type="text" name="department" class="form-control" value="<?php echo $row['department'] ?>">
         </div>
 
         <div class="form-group">
-            <label for="age">Age</label>
-            <input type="text" name="age" class="form-control" value="<?php echo $row['age'] ?>">
+            <label for="courses_duration">Course Duration</label>
+            <input type="text" name="courses_duration" class="form-control" value="<?php echo $row['courses_duration'] ?>">
         </div>
+
+        <div class="form-group">
+            <label for="location">Location</label>
+            <input type="text" name="location" class="form-control" value="<?php echo $row['location'] ?>">
+        </div>
+
         <div class="update_btn">
             <input type="submit" class="btn btn-success" name="update_students" value="UPDATE">
         </div>

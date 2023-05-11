@@ -1,16 +1,16 @@
 <?php
 include 'dbcon.php';
 if(isset($_POST['add_students'])){
-    $fname  = $_POST['f_name'];
-    $lname = $_POST['l_name'];
-    $age = $_POST['age']; 
+    $uname  = $_POST['uni_name'];
+    $dept = $_POST['department'];
+    $time = $_POST['courses_duration']; 
+    $city = $_POST['location']; 
 
-    if($fname == "" || empty($fname)){
+    if($uname == "" || empty($uname)){
         header('location:index.php?message=You need to fill in the first name');
     }
     else{
-        $query = "insert into `students` (`first_name`, `last_name`, `age`) 
-                values('$fname', '$lname', '$age')";
+        $query = "insert into `students` (`uni_name`, `department`, `courses_duration`,`location`) values('$uname', '$dept','$time', '$city')";
             
         $result = mysqli_query($connection,$query);
 
@@ -18,7 +18,7 @@ if(isset($_POST['add_students'])){
             die("Query Failed".mysqli_error($connection));
         }
         else{
-            header('location:index.php?insert_msg=Your data has been added successfully');
+            header('location:admin_home.php?insert_msg=Your data has been added successfully');
         }
     }
 }
