@@ -3,11 +3,10 @@
 
     <div class="mx-auto" style="width: 80vw;">
     <form action="" method="GET">
-                                    <div class="input-group mb-3">
-                                        <input type="text" name="search" required value="<?php if(isset($_GET['search'])){echo $_GET['search']; } ?>" class="form-control" placeholder="Search data">
-                                        <button type="submit" class="btn btn-primary">Search</button>
-                                    </div>
-                                </form>
+        <div class="input-group mb-3">
+            <input type="text" name="search" required value="<?php if(isset($_GET['search'])){echo $_GET['search']; } ?>"           class="form-control" placeholder="Search data"><button type="submit" class="btn btn-primary">Search</button>
+        </div>
+    </form>
         <!-- <h1 class="text-center">Search Result</h1> -->
         <table class="table table-hover table-bordered table-striped">
             <thead>
@@ -23,7 +22,8 @@
             <?php 
                 if(isset($_GET['search'])){
                     $filtervalues = $_GET['search'];
-                    $query = "SELECT * FROM students WHERE location LIKE '%$filtervalues%'";
+                    $query = "SELECT * FROM students WHERE (location LIKE '%$filtervalues%' OR department Like '%$filtervalues%' OR 
+                    uni_name Like '%$filtervalues%')";
                     $query_run = mysqli_query($connection, $query);
                     if(mysqli_num_rows($query_run) > 0){
                         foreach($query_run as $items){

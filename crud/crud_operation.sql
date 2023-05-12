@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 11, 2023 at 10:49 PM
+-- Generation Time: May 12, 2023 at 10:28 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -39,12 +39,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `fname`, `uname`, `password`) VALUES
-(1, 'Anik Dash', 'anik1', 202),
-(13, 'prity', 'pp', 202),
-(14, 'sdf', 'sd', 202),
-(15, 'anik', 'ab', 202),
-(16, 'df', 'sdf', 202),
-(17, 'an', 'aaa', 202);
+(15, 'anik', 'ab', 202);
 
 -- --------------------------------------------------------
 
@@ -59,6 +54,22 @@ CREATE TABLE `students` (
   `courses_duration` varchar(255) NOT NULL,
   `location` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `students`
+--
+
+INSERT INTO `students` (`id`, `uni_name`, `department`, `courses_duration`, `location`) VALUES
+(1, 'Ahsanullah University of Science and Technology', 'CSE', '4', 'Dhaka'),
+(2, 'American International University-Bangladesh', 'EEE', '3', 'Dhaka'),
+(3, 'Anwer Khan Modern University', 'BBA', '3', 'Dhaka'),
+(4, 'Daffodil International University', 'CSE', '4', 'Ashulia'),
+(5, 'Daffodil International University', 'CSE', '4', 'Dhanmondi'),
+(6, 'Daffodil International University', 'EEE', '5', 'Dhanmondi 32'),
+(7, 'Bangabandhu Sheikh Mujibur Rahman Agricultural University', 'Vatenary', '4', 'Gazipur'),
+(8, 'Bangladesh Agricultural University', 'Agg', '4', 'Mymensingh'),
+(9, 'Bangladesh University of Professionals', 'ICE', '4', 'Mirpur'),
+(10, 'Chittagong Medical University', 'MBBS', '4', 'Chittagong');
 
 --
 -- Indexes for dumped tables
@@ -84,13 +95,13 @@ ALTER TABLE `students`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

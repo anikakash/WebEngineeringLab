@@ -5,10 +5,10 @@ include_once './auth_user.php'
 ?>
 
 
-    <div class="d-flex">
+    <!-- <div class="d-flex">
     <input class="form-control me-2 mb-10" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
-    </div>
+    </div> -->
 
     <div class="box1">
         <h2>All Information</h2>

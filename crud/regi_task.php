@@ -18,7 +18,7 @@ if (!$connection) {
         if ($f_name && $u_name && $passwordHash) {
             $query = "INSERT into `admin` (fname, uname, password) VALUES ('$f_name', '$u_name', '$passwordHash')";
             mysqli_query($connection, $query);
-            include_once './login_task.php';
+            include_once './admin_home.php';
         }
     }
 }
