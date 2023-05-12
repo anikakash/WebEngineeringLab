@@ -12,8 +12,8 @@
             }
             else{
                 $row = mysqli_fetch_assoc($result);
-                print_r($row);
-                header("location:admin_home.php?delete_msg=You have successfully updated the data.");
+                // print_r($row);
+                header("location:admin_home.php?delete_msg=You have successfully delete the data.");
             }
         }
 ?>
