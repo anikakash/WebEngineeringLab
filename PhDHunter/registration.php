@@ -23,3 +23,4 @@
             <button type="submit" class="btn btn-primary">Sign UP</button>
         </form>
     </div>
+    <?php include("footer.php"); ?>
