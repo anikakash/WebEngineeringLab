@@ -1,5 +1,7 @@
-<?php include("header.php");?>
-<?php include("dbcon.php");?>
+<?php 
+include("header.php");
+include("dbcon.php");
+?>
 
     <div class="mx-auto" style="width: 80vw;">
     <form action="" method="GET">
@@ -53,3 +55,4 @@
 </body>
 
 </html>
+<?php include("footer.php"); ?>
