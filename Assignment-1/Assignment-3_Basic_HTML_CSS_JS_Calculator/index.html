@@ -9,7 +9,7 @@
 		}
 
 		h1 {
-			text-align: center;
+			/* text-align: center; */
 			margin-top: 20px;
 			margin-bottom: 30px;
 		}
@@ -66,6 +66,7 @@
 	</style>
 </head>
 <body>
+	<H1>Calculator</H1>
 	<div class="calculator">
 		<label for="num1">Enter first number:</label>
 		<input type="number" id="num1"><br><br>
@@ -80,6 +81,27 @@
 		<p id="result"></p>
 	</div>
 	
-	<script src="script.js"></script>
+	<script>
+		function div() {
+		let num1 = Number(document.getElementById("num1").value);
+		let num2 = Number(document.getElementById("num2").value);
+		let result = num1/num2;
+		document.getElementById("result").textContent = "The Result is: " + result;
+	}
+
+	function multiply() {
+		let num1 = Number(document.getElementById("num1").value);
+		let num2 = Number(document.getElementById("num2").value);
+		let result = num1 * num2;
+		document.getElementById("result").textContent = "The Result is: " + result;
+	}
+
+	function sub(){
+		let num1 = Number(document.getElementById("num1").value);
+		let num2 = Number(document.getElementById("num2").value);
+		let result = Math.abs(num1-num2);
+		document.getElementById("result").textContent = "The Result is: " + result;
+	}
+	</script>
 </body>
 </html>
