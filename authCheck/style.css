@@ -1,0 +1,41 @@
+*{
+  text-decoration: none;
+}
+.navbar{
+  background: rgb(242, 174, 253);
+  font-family: calibri;
+  padding-right: 15px;
+  padding-left: 15px; 
+}
+.navdiv{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo{
+  font-size: 50px;
+  font-weight: 600;
+  color: rgb(241, 13, 150);
+}
+li{
+  list-style: none;
+  display: inline-block;
+}
+li a{
+  color: rgb(21, 12, 12);
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 25px;
+}
+button{
+  background-color: black;
+  margin-left: 10px;
+  border-radius: 10px;
+  padding:10px;
+  width: 90px;
+}
+button a{
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+}
