@@ -29,7 +29,9 @@ include "db.php";
 
         $result = mysqli_query($connection, $query);
         if(mysqli_num_rows($result)==1){
-               
+            session_start();
+            $_SESSION['userid']=$username;
+            header("location: profile.php");
         }else{
             echo "<script>alert('Incorrect Username or Password');</script>";
         }

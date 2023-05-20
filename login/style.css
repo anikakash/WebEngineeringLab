@@ -51,7 +51,7 @@ div.login-form button{
     border: none;
     font-size: 16px;
     font-weight: 500;
-    margin: 15px 0
+    margin: 15px 0px;
     
 }
 div.login-form div.extra{
