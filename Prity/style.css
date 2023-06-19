@@ -1,0 +1,19 @@
+.head_section h1{
+    text-align: center;
+}
+.ab{
+    font-size: 20px;
+    font-family: monospace;
+    color: rgb(189, 138, 229);
+}
+#about_ab{
+    text-align: center;
+}
+
+.about span{
+    color: aquamarine;
+    font-size: 35px;
+}
+.about h1{
+    color: blueviolet;
+}
