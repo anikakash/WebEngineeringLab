@@ -3,7 +3,7 @@ include 'dbcon.php';
 $id = $_GET['id'];
 $query = "select * from `data` where `id` = '$id'";
 $data = mysqli_query($connection, $query);
-$row = mysqli_fetch_array($data);
+$row = mysqli_fetch_assoc($data);
 ?>
 
 <head>
